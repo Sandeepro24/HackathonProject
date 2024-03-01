@@ -33,7 +33,7 @@ public class Helper{
 	static Properties p;	//creating an instance to access properties from config.properties file 
 	static Logger logger;	//creating an instance to logger 
 
-	@SuppressWarnings("deprecation")
+	//@SuppressWarnings("deprecation")
 	//Method for initializing browser with two environments remote and local
 	public static WebDriver initilizeBrowser() throws IOException {
 		if (getProperties().getProperty("execution_env").equalsIgnoreCase("remote")) {

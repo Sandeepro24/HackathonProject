@@ -10,7 +10,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features = { "src/test/resources/Features/EMIcalculatorEndToEnd.feature",}, glue = "com.LoanEMI.StepDefinitions", plugin = {"pretty", "rerun:target/rerun.txt","html:Cucumber-reports/report.html",
+		features = { "src/test/resources/Features/",}, glue = "com.LoanEMI.StepDefinitions", plugin = {"pretty", "rerun:target/rerun.txt","html:Cucumber-reports/report.html",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, dryRun = false, monochrome = true)
 
 @Test

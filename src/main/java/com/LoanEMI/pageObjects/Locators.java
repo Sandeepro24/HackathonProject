@@ -240,7 +240,7 @@ public class Locators extends BasePage {
 	Actions act= new Actions(driver);
 	public void clickOnLoanEmiCalculator() {
 		loanCalculator.click();
-	}
+		}
 	
 	public void loanAmountText(){
 		boolean flag = loanAmount.isDisplayed();
@@ -254,13 +254,13 @@ public class Locators extends BasePage {
   		String amount2 = loanAmount.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Loan Interest slider working........... ");
+  		System.out.println("Loan Amount slider working........... ");
 	}
 	
 	public void loanInterestRateText(){
 		boolean flag = interestRate.isDisplayed();
 		Assert.assertTrue(flag);
-		Assert.assertEquals(flag, true,"Text Box is not working");
+		Assert.assertEquals(flag, true,"Interest rate text box is not working");
 	}
 	
 	public void verifyInterestRateSlider() {
@@ -275,7 +275,7 @@ public class Locators extends BasePage {
 	public void loanTenureText(){
 		boolean flag = loanTenure.isDisplayed();
 		Assert.assertTrue(flag);
-		Assert.assertEquals(flag, true,"Text Box is not working");
+		Assert.assertEquals(flag, true,"Loan tenure text box is not working");
 	}
 	
 	public void verifyLoanTenureSlider() {
@@ -284,13 +284,13 @@ public class Locators extends BasePage {
   		String amount2 = loanTenure.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Interest rate slider working........... ");
+  		System.out.println("Loan tenure slider working........... ");
 	}
 	
 	public void feeChargeText(){
 		boolean flag = loanFees.isDisplayed();
 		Assert.assertTrue(flag);
-		Assert.assertEquals(flag, true,"Text Box is not working");
+		Assert.assertEquals(flag, true,"fee & Charge text box is not working");
 	}
 	
 	public void verifyFeeChargeSlider() {
@@ -299,7 +299,7 @@ public class Locators extends BasePage {
   		String amount2 = loanFees.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Interest rate slider working........... ");
+  		System.out.println("fee & charge slider working........... ");
 	}
 	
 	//UI Check for LOANAMOUNT CALCULATOR
@@ -320,13 +320,13 @@ public class Locators extends BasePage {
   		String amount2 = loanemi.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Loan Interest slider working........... ");
+  		System.out.println("EMI slider working........... ");
 	}
 	
 	public void EMIInterestRateText(){
 		boolean flag = interestRate.isDisplayed();
 		Assert.assertTrue(flag);
-		Assert.assertEquals(flag, true,"Text Box is not working");
+		Assert.assertEquals(flag, true,"Interest rate text Box is not working");
 	}
 	
 	public void verifyEMIInterestRateSlider() {
@@ -352,7 +352,7 @@ public class Locators extends BasePage {
   		String amount2 = loanTenure.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Interest rate slider working........... ");
+  		System.out.println("Loan tenure slider working........... ");
 	}
 	
 	public void emifeeChargeText(){
@@ -367,7 +367,7 @@ public class Locators extends BasePage {
   		String amount2 = loanFees.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Interest rate slider working........... ");
+  		System.out.println("Loan fee slider working........... ");
 	}
 		
 	//UI CHECK FOR LOAN TENURE CALCULATOR	
@@ -387,7 +387,7 @@ public class Locators extends BasePage {
   		String amount2 = loanAmount.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Loan Interest slider working........... ");
+  		System.out.println("Loan Amount slider working........... ");
 	}
 	
 	public void tenureEmiAmountText(){
@@ -401,7 +401,7 @@ public class Locators extends BasePage {
   		String amount2 = loanemi.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Interest rate slider working........... ");
+  		System.out.println("Loan emi slider working........... ");
 	}
 	
 	public void tenureInterestRateText(){
@@ -421,7 +421,6 @@ public class Locators extends BasePage {
 	
 	public void tenurefeeChargeText(){
 		boolean flag = loanFees.isDisplayed();
-		Assert.assertTrue(flag);
 		Assert.assertEquals(flag, true,"Text Box is not working");
 	}
 	
@@ -431,7 +430,13 @@ public class Locators extends BasePage {
   		String amount2 = loanFees.getAttribute("value");
   		boolean amount = amount1.equals(amount2);
   		Assert.assertEquals(false, amount);
-  		System.out.println("Interest rate slider working........... ");
+  		System.out.println("Fee and Charge is slider working........... ");
 	}	
 	
+	
+	//Smoke & regression Testing Methods
+	public void getPage() {
+		driver.navigate().to("https://emicalculator.net/loan-calculator/");
+	}
+
 }

@@ -31,19 +31,19 @@ public class Hooks {
 	}
 
 	//method for closing the browser
-	//@AfterAll
-//	public static void tearDown() {
-//		driver.quit();	//closing the browser
-//	}
+	@AfterAll
+	public static void tearDown() {
+		driver.quit();	//closing the browser
+	}
 
-	//method for attaching screenshot
-//	@AfterStep
-//	public void addScreenshot(Scenario scenario) {
-//		// this is for cucumber junit report
-//		if (!scenario.isFailed()) {		//if scenario is passed
-//			TakesScreenshot ts = (TakesScreenshot) driver;		//taking screenshot using takingScreenshot interfacess
-//			byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);	
-//			scenario.attach(screenshot, "image/png", scenario.getName());	//attaching the screen shot 
-//		}
-//	}
+//	method for attaching screenshot
+	@AfterStep
+	public void addScreenshot(Scenario scenario) {
+		// this is for cucumber junit report
+		if (!scenario.isFailed()) {		//if scenario is passed
+			TakesScreenshot ts = (TakesScreenshot) driver;		//taking screenshot using takingScreenshot interfacess
+			byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);	
+			scenario.attach(screenshot, "image/png", scenario.getName());	//attaching the screen shot 
+		}
+	}
 }
